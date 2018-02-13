@@ -4,17 +4,23 @@ import Navigation from './components/navigation'
 import Features from './components/features'
 import Contact from './components/contact'
 import Footer from './components/footer'
+import Header from './components/header'
+import Services from './components/services'
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Navigation/>
-        <header>header</header>
-        <Features feature="feature 1"/>
-        <Features feature="feature 2"/>
-        <Contact/>
-        <Footer/>
+        <Navigation />
+        <Header />
+        <div className="container">
+          <Features classes="features" />
+          <Services classes="services" />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     );
   }

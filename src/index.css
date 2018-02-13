@@ -1,5 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #9FC5CA;
 }
+
+.navigation{
+  background-color: #0E545E ;
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  background-image: url('./images/background-header.jpg');
+  background-size: 100% 100%;
+  display: table;
+  top: 0;
+  text-align: center;
+}
+
+.inner{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%
+}
+
+.App, #root {
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #f9f3f4;
+  text-shadow: 0px 0px 300px #000;
+  font-size: 500%;
+}
+
+h2 {
+  font-family: 'Oswald';
+  }
+
+  .navigation {
+    text-align: center;
+  }
+
+  .navigation a{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-family: 'Oswald';
+    font-size: 200%;
+    text-decoration: none;
+    background-color: #206B76;
+    color: #9FC5CA;
+    width: 120px;
+ 
+ }
+
+ .navigation a:hover{
+   background-color: #0E545E;
+ }
+
+ .features #services {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   
+ }
+ .services #service-img{
+grid-column-start: 1;
+grid-column-end: 2;
+ }
+
+ .services #service-text{
+grid-column-start: 2;
+grid-column-end: 3;
+ }
+
+ .services {
+
+ }
+
+ .container {
+   width: 80%;
+   margin-left: 10%;
+   margin-right: 10%;
+ }
+
+ img {
+   width: 40%;
+   height: auto;
+ }
