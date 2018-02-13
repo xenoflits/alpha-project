@@ -12,15 +12,16 @@ import Services from './components/services'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Navigation />
-        <Header />
-        <div className="container">
+      <div className="App"
+      ><div className="container">
+          <Navigation />
+          <Header />
           <Features classes="features" />
           <Services classes="services" />
           <Contact />
-          <Footer />
         </div>
+        <Footer />
+
       </div>
     );
   }

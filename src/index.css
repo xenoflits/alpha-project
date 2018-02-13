@@ -7,12 +7,56 @@ html, body {
   font-family: sans-serif;
   height: 100%;
   width: 100%;
-  background-color: #9FC5CA;
+  background-color: #e7ebee;
 }
 
 .navigation{
   background-color: #0E545E ;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
+
+.contact {
+  background-color: #206B76 ;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: auto;
+}
+
+form {
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
 
 header {
   height: 100%;
@@ -22,6 +66,8 @@ header {
   display: table;
   top: 0;
   text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .inner{
@@ -70,33 +116,90 @@ h2 {
    background-color: #0E545E;
  }
 
- .features #services {
+ .container {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr;
-   
- }
- .services #service-img{
-grid-column-start: 1;
-grid-column-end: 2;
- }
-
- .services #service-text{
-grid-column-start: 2;
-grid-column-end: 3;
- }
-
- .services {
-
- }
-
- .container {
+   grid-template-rows: 70px 750px auto;
    width: 80%;
    margin-left: 10%;
    margin-right: 10%;
+   
+ }
+
+ footer {
+   display: table;
+   text-align: center;
+   width:80%;
+   margin-left: 10%;
+   margin-right: 10%;
+   background-color:#0E545E;
+   height: 60px;
+   
+ }
+
+ footer h3 {
+  
+  
+ }
+
+
+
+ .Features, .Services {
+   background-color: white;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
  }
 
  img {
-   width: 40%;
+   width: 100%;
    height: auto;
  }
+
+ .Features-text, .service-text {
+   max-width: 80%;
+   margin-top: auto;
+   margin-bottom: auto;
+   padding: 10%;
+ }
+
+ .Features-text h1, .service-text h1 {
+   color: black;
+ }
+
+ @media only screen and (max-width: 1024px) {
+   .container {
+     grid-template-rows: auto auto auto;
+     grid-template-columns: 1fr;
+     width: 100%;
+     margin: 0px;
+   }
+
+   .navigation a {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
+
+   .Features, .Services{
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  footer {
+    display: table;
+    text-align: center;
+    width:100%;
+    background-color:#0E545E;
+    height: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+}
